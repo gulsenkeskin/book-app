@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Theme {
+class Themes {
   static final lightTheme = ThemeData(
       scaffoldBackgroundColor: Colors.grey[100],
       colorScheme: const ColorScheme.light().copyWith(

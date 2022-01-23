@@ -15,7 +15,11 @@ class CustomAppBar extends StatelessWidget {
           Expanded(child: TextField(
             decoration: InputDecoration(
               filled: true,
-              fillColor: Theme.of(context).colorScheme.secondary
+              fillColor: Theme.of(context).colorScheme.secondary,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide.none
+              )
             ),
           )),
           IconButton(

@@ -28,16 +28,33 @@ class RecommendedBook extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Expanded(
-                              child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              book.imgUrl!,
-                              fit: BoxFit.cover,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                book.imgUrl!,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ))
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(vertical: 2),
+                            child: Text(
+                              book.name!,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          Text(
+                            book.author!,
+                            style: TextStyle(color: Colors.grey),
+                          )
                         ],
                       ),
-                    )
+                    ),
+                    Positioned(
+                        top: 10,
+                        left: 10,
+                        child: _buildIconText(
+                            Icons.star, Colors.orange[300]!, '${book.score}'))
                   ],
                 );
               },
@@ -47,6 +64,35 @@ class RecommendedBook extends StatelessWidget {
               itemCount: recommendedList.length),
         )
       ],
+    );
+  }
+
+  Widget _buildIconText(IconData icon, Color color, String text) {
+    return Container(
+      padding: EdgeInsets.all(3),
+      decoration: BoxDecoration(
+        color: Colors.black87,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        children: [
+          Icon(
+            icon,
+            color: color,
+            size: 14,
+          ),
+          const SizedBox(
+            width: 2,
+          ),
+          Text(
+            text,
+            style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: Colors.white70),
+          )
+        ],
+      ),
     );
   }
 }

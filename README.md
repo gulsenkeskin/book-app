@@ -2,6 +2,8 @@
 Book app UI with dark mode enabled, also this app created using the Flutter 2.5 skeleton template.
 </br>
 `flutter create -t skeleton projectName`
+
+
 ![1](https://user-images.githubusercontent.com/63197899/150702177-a2df14b4-f4e7-430c-b09e-00d57c1fe2a7.PNG)
 
 

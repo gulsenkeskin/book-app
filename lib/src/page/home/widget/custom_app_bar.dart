@@ -12,16 +12,20 @@ class CustomAppBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         children: [
-          Expanded(child: TextField(
+          Expanded(
+              child: TextField(
             decoration: InputDecoration(
-              filled: true,
-              fillColor: Theme.of(context).colorScheme.secondary,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(15),
-                borderSide: BorderSide.none
-              ),
-              contentPadding: const EdgeInsets.symmetric(vertical: 0)
-            ),
+                filled: true,
+                fillColor: Theme.of(context).colorScheme.secondary,
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide.none),
+                contentPadding: const EdgeInsets.symmetric(vertical: 0),
+                prefixIcon: Icon(
+                  Icons.search_outlined,
+                  color: Theme.of(context).colorScheme.onSurface,
+                  size: 30,
+                )),
           )),
           IconButton(
               onPressed: () {

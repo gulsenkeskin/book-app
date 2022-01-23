@@ -19,7 +19,8 @@ class CustomAppBar extends StatelessWidget {
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide.none
-              )
+              ),
+              contentPadding: const EdgeInsets.symmetric(vertical: 0)
             ),
           )),
           IconButton(

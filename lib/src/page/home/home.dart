@@ -1,6 +1,7 @@
 import 'package:book_app/src/page/home/widget/coming_book.dart';
 import 'package:book_app/src/page/home/widget/custom_app_bar.dart';
 import 'package:book_app/src/page/home/widget/recommended_book.dart';
+import 'package:book_app/src/page/home/widget/trending_book.dart';
 import 'package:book_app/src/settings/settings_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ class HomePage extends StatelessWidget {
           CustomAppBar(settingsController: settingsController),
           ComingBook(),
           RecommendedBook(),
+          TrendingBook(),
         ],
       ),
     );

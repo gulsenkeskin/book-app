@@ -25,7 +25,9 @@ class CustomAppBar extends StatelessWidget {
                   Icons.search_outlined,
                   color: Theme.of(context).colorScheme.onSurface,
                   size: 30,
-                )),
+                ),
+                hintText: 'Search book here..',
+                hintStyle: TextStyle(color: Colors.grey[600])),
           )),
           IconButton(
               onPressed: () {

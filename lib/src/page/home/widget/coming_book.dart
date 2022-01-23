@@ -48,16 +48,45 @@ class ComingBook extends StatelessWidget {
                                     Colors.black12,
                                     Colors.black.withOpacity(0)
                                   ])),
-                        )
+                        ),
+                        const Positioned(
+                            left: 30,
+                            top: 20,
+                            child: Text(
+                              'Upcoming Book',
+                              style:
+                                  TextStyle(fontSize: 24, color: Colors.white),
+                            )),
+                        const Positioned(
+                            left: 30,
+                            top: 55,
+                            child: Text(
+                              '30+ new book coming with various \ngames are waiting for you',
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.grey),
+                            ))
                       ],
                     ))
                 .toList(),
           ),
           Positioned(
+              left: 30,
+              bottom: 10,
               child: SmoothPageIndicator(
-            controller: _pageController,
-            count: upcomings.length,
-          ))
+                controller: _pageController,
+                count: upcomings.length,
+                effect: const ExpandingDotsEffect(
+                  expansionFactor: 4,
+                  dotWidth: 8,
+                  dotHeight: 4,
+                  activeDotColor: Colors.white,
+                ),
+                onDotClicked: (index) {
+                  _pageController.animateToPage(index,
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeOut);
+                },
+              ))
         ],
       ),
     );

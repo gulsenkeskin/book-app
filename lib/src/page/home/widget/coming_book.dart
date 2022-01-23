@@ -5,9 +5,9 @@ class ComingBook extends StatelessWidget {
   ComingBook({Key? key}) : super(key: key);
 
   final upcomings = [
-    'assets/images/upcoming1.jpeg',
-    'assets/images/upcoming2.jpeg',
-    'assets/images/upcoming3.jpeg',
+    'assets/images/upcoming1.jpg',
+    'assets/images/upcoming2.png',
+    'assets/images/upcoming3.jpg',
   ];
 
   final _pageController = PageController();
@@ -26,7 +26,14 @@ class ComingBook extends StatelessWidget {
                       fit: StackFit.expand,
                       children: [
                         Container(
-                          color: Colors.white,
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset(
+                              e,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
                         Container(
                           margin: const EdgeInsets.symmetric(horizontal: 10),

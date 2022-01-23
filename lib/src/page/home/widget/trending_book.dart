@@ -1,4 +1,5 @@
 import 'package:book_app/src/model/book.dart';
+import 'package:book_app/src/page/detail/detail.dart';
 import 'package:book_app/src/page/home/widget/category_title.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,10 @@ class TrendingBook extends StatelessWidget {
             itemBuilder: (_, index) {
               final book = trendingList[index];
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => DetailPage(book)));
+                },
                 child: SizedBox(
                   height: 120,
                   child: Row(

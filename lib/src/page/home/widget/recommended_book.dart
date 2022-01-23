@@ -12,8 +12,6 @@ class RecommendedBook extends StatelessWidget {
     return Column(
       children: [
         const CategoryTitle('Recommended for you'),
-        ComingBook(),
-        const RecommendedBook(),
       ],
     );
   }
